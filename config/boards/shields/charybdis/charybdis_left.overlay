@@ -20,8 +20,8 @@
 	compatible = "nordic,nrf-spim";
 	status = "okay";
     sck-pin = <21>; //old
-    mosi-pin = <7>; //old
-    miso-pin = <7>;//old same as mosi (3-wire spi)
+    mosi-pin = <10>; //old
+    miso-pin = <10>;//old same as mosi (3-wire spi)
 	cs-gpios = <&gpio0 23 GPIO_ACTIVE_LOW>;
 
 
