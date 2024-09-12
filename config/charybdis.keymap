@@ -15,23 +15,24 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5       &kp N6         &kp N7      &kp N8     &kp N9     &kp N0     &kp BSPC
-&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T        &kp Y          &kp U       &kp I      &kp O      &kp P      &kp LBKT
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &kp H          &kp J       &kp K      &kp L      &kp SEMI   &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp N          &kp M       &kp COMMA  &kp SLASH  &kp MINUS  &kp BSLH
-                                &kp LEFT_ALT  &kp LEFT_WIN  &kp SPACE    &kp PG_UP      &kp GRAVE   &kp ENTER
-                                              &mo 1         &kp CAPS     &kp PAGE_DOWN  &kp DELETE
+&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5       &kp N6         &kp N7      &kp N8     &kp N9     &kp N0     &kp BSPC  &kp BSPC  &kp BSPC
+&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T        &kp Y          &kp U       &kp I      &kp O      &kp P      &kp LBKT  &kp BSPC  &kp BSPC
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &kp H          &kp J       &kp K      &kp L      &kp SEMI   &kp SQT  &kp BSPC   &kp BSPC
+&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp N          &kp M       &kp COMMA  &kp SLASH  &kp MINUS  &kp BSLH  &kp BSPC  &kp BSPC
+&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp N          &kp M       &kp COMMA  &kp SLASH  &kp MINUS  &kp BSLH  &kp BSPC  &kp BSPC
+                                                         &kp LEFT_WIN  &kp SPACE    &kp PG_UP      &kp GRAVE  
+                                        
             >;
         };
 
         layer_1 {
             bindings = <
-&kp F1     &kp F2           &kp F3           &kp F4           &kp F5           &kp F6        &kp F7        &kp F8        &kp F9      &kp F10    &kp F11    &kp F12
-&kp TAB    &none            &none            &none            &none            &bt BT_NXT    &none         &none         &kp UP      &none      &none      &kp RBKT
-&kp LSHFT  &none            &none            &none            &none            &bt BT_CLR    &none         &kp LEFT      &kp DOWN    &kp RIGHT  &none      &none
-&kp LCTRL  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF  &rgb_ug RGB_TOG  &none         &none         &none         &kp PERIOD  &none      &kp EQUAL  &none
-                                             &none            &none            &none         &none         &none         &none
-                                                              &none            &none         &kp C_VOL_UP  &kp C_VOL_DN
+&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5       &kp N6         &kp N7      &kp N8     &kp N9     &kp N0     &kp BSPC  &kp BSPC  &kp BSPC
+&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T        &kp Y          &kp U       &kp I      &kp O      &kp P      &kp LBKT  &kp BSPC  &kp BSPC
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &kp H          &kp J       &kp K      &kp L      &kp SEMI   &kp SQT  &kp BSPC   &kp BSPC
+&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp N          &kp M       &kp COMMA  &kp SLASH  &kp MINUS  &kp BSLH  &kp BSPC  &kp BSPC
+&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp N          &kp M       &kp COMMA  &kp SLASH  &kp MINUS  &kp BSLH  &kp BSPC  &kp BSPC
+                                                         &kp LEFT_WIN  &kp SPACE    &kp PG_UP      &kp GRAVE
             >;
         };
 
