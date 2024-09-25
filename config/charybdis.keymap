@@ -15,24 +15,23 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5       &kp N6         &kp N7      &kp N8     &kp N9     &kp N0     &kp BSPC  &kp BSPC  &kp BSPC
-&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T        &kp Y          &kp U       &kp I      &kp O      &kp P      &kp LBKT  &kp BSPC  &kp BSPC
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &kp H          &kp J       &kp K      &kp L      &kp SEMI   &kp SQT  &kp BSPC   &kp BSPC
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp N          &kp M       &kp COMMA  &kp SLASH  &kp MINUS  &kp BSLH  &kp BSPC  &kp BSPC
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp N          &kp M       &kp COMMA  &kp SLASH  &kp MINUS  &kp BSLH  &kp BSPC  &kp BSPC
-                                                         &kp LEFT_WIN  &kp SPACE    &kp PG_UP      &kp GRAVE  
-                                        
+&kp ESC       &kp N1        &kp N2          &kp N3     &kp N4         &kp N5     &kp DEL          &kp NUMBER_6     &kp N7         &kp N8             &kp N9     &kp N0          &kp MINUS         &kp EQUAL
+&kp TAB       &kp Q         &kp W           &kp E      &kp R          &kp T      &kp BACKSPACE    &kp Y            &kp U          &kp I              &kp O      &kp P           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp CAPS      &kp A         &kp S           &kp D      &kp F          &kp G      &kp ENTER        &kp H            &kp J          &kp K              &kp L      &kp SEMICOLON   &kp SQT           &kp NON_US_BACKSLASH
+&kp LEFT_WIN  &kp Z         &kp X           &kp C      &kp V          &kp B      &kp LC(V)        &kp RCTRL        &kp N          &kp M              &kp COMMA  &kp PERIOD      &kp UP_ARROW      &kp SLASH
+&mo 1         &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &kp LC(EQUAL)  &kp SPACE  &kp LA(F9)       &kp RIGHT_ALT    &kp SPACE      &kp LC(LS(EQUAL))  &kp GRAVE  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW
+                                                                      &kp LC(C)  &kp LC(F9)       &kp RIGHT_SHIFT  &kp LC(LS(U))
             >;
         };
 
         layer_1 {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5       &kp N6         &kp N7      &kp N8     &kp N9     &kp N0     &kp BSPC  &kp BSPC  &kp BSPC
-&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T        &kp Y          &kp U       &kp I      &kp O      &kp P      &kp LBKT  &kp BSPC  &kp BSPC
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &kp H          &kp J       &kp K      &kp L      &kp SEMI   &kp SQT  &kp BSPC   &kp BSPC
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp N          &kp M       &kp COMMA  &kp SLASH  &kp MINUS  &kp BSLH  &kp BSPC  &kp BSPC
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V         &kp B        &kp N          &kp M       &kp COMMA  &kp SLASH  &kp MINUS  &kp BSLH  &kp BSPC  &kp BSPC
-                                                         &kp LEFT_WIN  &kp SPACE    &kp PG_UP      &kp GRAVE
+&none  &none  &none  &none  &none  &none  &none    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none            &none            &none            &none            &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &bt BT_CLR       &bt BT_NXT       &none            &none            &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none            &none            &none            &none            &none  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none            &none            &none            &none            &none  &none  &bootloader
+                                   &none  &none    &none            &none
             >;
         };
 
