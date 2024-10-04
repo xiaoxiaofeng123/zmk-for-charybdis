@@ -14,50 +14,92 @@
 
 / {
 
-
+   #define DEFAULT 0
+#define NUMBER  1
+#define SYMBOL  2
+#define HOTKEY  3
   
 
 
      keymap {
        compatible = "zmk,keymap";
        default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
+ label = "DEFAULT";
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+  // -----------------------------------------------------------------------------------------------------------------------------------
+            // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                                   |  Y   |  U    |  I    |  O   |   P   |   \   |
+            // |  TAB  |  A  |  S  |  D   |  F   |  G   |                                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // | CTRL  |  Z  |  X  |  C   |  V   |  B   |        				|  N   |  M    |  ,    |  .   |   /   | SHIFT |
+            // |             | GUI |  ~   |SHIFT | SPACE|                 			| ENTER| BSPC  |   -   |  =   | 
+            // |             |            | CTRL |  DEL |            			| HOME |  CTRL | 
+            // |             |            |  ALT | LEFT |					|  END |  ALT |
+
+            bindings = <
+&lt 3 ESC        &kp Q           &kp W           &kp E        &kp R             &kp T        &kp Y        &kp U              &kp I        &kp O            &kp P               &kp MINUS
+&kp GRAVE        &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G        &kp H        &hm RIGHT_SHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RIGHT_GUI SEMI  &kp SQT
+&kp LEFT_SHIFT   &kp Z           &kp X           &kp C        &kp V             &kp B        &kp N        &kp M              &kp COMMA    &kp DOT          &kp FSLH            &kp RSHFT
+&lt 4 BACKSPACE  &mo 1           &kp END         &kp HOME     &kp LBKT          &kp BSLH     &kp EQUAL    &kp RBKT           &kp MINUS    &kp EQUAL        &mo 2               &lt 5 DEL
+                                                              &lt 1 TAB         &lt 6 SPACE  &lt 6 SPACE  &lt 2 ENTER
+            >;
+        };
+
+        number_layer {
+            label = "NUMBER";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // |       |  F1 |  F2 |  F3  |  F4  |  F5  |                   |  F6  |  F7   |  F8   |  F9  |  F10  |  F11  |
+            // | `     |   1 |   2 |   3  |   4  |   5  |                   |   6  |   7   |   8   |   9  |    0  |  F12  |
+            // |       |  !  |  @  |  #   |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |   |   |
+            //               |     |      |   [  |  ]   |                   |  {   |   }   |       |      |
+            //               |     |      |      |      |                   |      |       |       |      |
+            //               |     |      |      |      |                   |      |       |       |      |
+
+            bindings = <
+&trans     &kp F1    &kp F2    &kp F3    &kp F4    &kp F5     &kp F6     &kp F7    &kp F8           &kp F9    &kp F10   &kp F11
+&kp GRAVE  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5     &kp N6     &kp N7    &kp N8           &kp N9    &kp N0    &kp F12
+&trans     &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT  &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp PIPE
+&trans     &trans    &kp LBKT  &kp RBKT  &kp LBRC  &kp RBRC   &trans     &trans    &trans           &trans    &trans    &trans
+                                         &trans    &trans     &trans     &trans
+            >;
+        };
+
+        symbol_layer {
+            label = "SYMBOL";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       | BTCLR |
+            // |     | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
+            // |     | ALT  | CTRL | SHIFT |       | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
+            // |            | UNDO | CUT   | COPY  |PASTE |                |      |      |       |      |
+            //                             |      |       |                |      |      |    
+            //                             |      |       |                |      |      |      
+
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans     &trans    &trans    &trans     &trans   &bt BT_CLR
+&trans      &kp INS       &kp PSCRN     &kp K_CMENU   &trans        &trans        &kp PG_UP  &trans    &kp UP    &trans     &kp N0   &trans
+&trans      &kp LALT      &kp LCTRL     &kp LSHFT     &trans        &kp CLCK      &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL  &kp BSPC
+&kp K_UNDO  &kp K_CUT     &kp K_COPY    &kp K_PASTE   &trans        &trans        &trans     &trans    &trans    &trans     &trans   &trans
+                                                      &trans        &trans        &trans     &trans
+            >;
+        };
+
+        hotkey_layer {
+            label = "HOTKEY";
+
+            // ------------------------------------------------------------------------------------------------------------
+            // |BTCLR | BT1   | BT2   |  BT3  |  BT4  |  BT5  |                |      |  7   |   8   |   9  |       | BTCLR |
+            // |      |RGB减色 |RGB增色|RGB减饱|RGB增饱 |RGB特效|                |      |  4   |   5   |   6  |       |       |
+            // |      |RGB减亮 |RGB增亮|       |       |       |                |      |  1   |   2   |   3  |       |       |
+            // |               | 	  |       |       |RGB开关|                 |      |      |   0   |   .  |
+            //                                |       |       |                |      |      |    
+            //                                |       |       |                |      |      |   
+
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4     &kp KP_NUMBER_0  &kp N7   &kp N8  &kp N9  &none  &bt BT_CLR
+&none       &rgb_ug RGB_HUD  &rgb_ug RGB_HUI  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_EFF  &none            &kp N4   &kp N5  &kp N6  &none  &none
+&none       &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none            &none            &none            &kp N1   &kp N2  &kp N3  &none  &none
+&none       &none            &none            &rgb_ug RGB_TOG  &none            &none            &kp N0           &kp DOT  &none   &none   &none  &none
+                                                               &none            &none            &none            &none
                         >;
                 };
         };
