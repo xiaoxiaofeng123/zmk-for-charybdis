@@ -15,23 +15,45 @@
 
         layer_0 {
             bindings = <
-&kp ESC       &kp NUMBER_1  &kp N2          &kp N3     &kp N4         &kp N5     &kp DEL          &kp NUMBER_6     &kp N7         &kp N8             &kp N9     &kp N0          &kp MINUS         &kp EQUAL
-&kp TAB       &kp Q         &kp W           &kp E      &kp R          &kp T      &kp BACKSPACE    &kp Y            &kp U          &kp I              &kp O      &kp P           &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp CAPS      &kp A         &kp S           &kp D      &kp F          &kp G      &kp ENTER        &kp H            &kp J          &kp K              &kp L      &kp SEMICOLON   &kp SQT           &kp BACKSLASH
-&kp LEFT_WIN  &kp Z         &kp X           &kp C      &kp V          &kp B      &kp LC(V)        &kp RCTRL        &kp N          &kp M              &kp COMMA  &kp PERIOD      &kp UP_ARROW      &kp SLASH
-&mo 1         &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL  &kp LC(EQUAL)  &kp SPACE  &kp LA(F9)       &kp RIGHT_ALT    &kp SPACE      &kp LC(LS(EQUAL))  &kp GRAVE  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT_ARROW
-                                                                      &kp LC(C)  &kp LC(F9)       &kp RIGHT_SHIFT  &kp LC(LS(U))
+&kp ESC       &kp NUMBER_1  &kp N2  &kp N3        &kp N4          &kp N5     &kp PRINTSCREEN    &kp HOME       &kp N6   &kp N7     &kp N8    &kp N9        &kp N0     &kp BSPC
+&kp GRAVE     &kp Q         &kp W   &kp E         &kp R           &kp T      &kp PG_UP          &kp END        &kp Y    &kp U      &kp I     &kp O         &kp P      &kp BSLH
+&kp CAPS      &kp A         &kp S   &kp D         &kp F           &kp G      &kp PAGE_DOWN      &kp PERIOD     &kp H    &kp J      &kp K     &kp L         &kp SEMI   &kp MINUS
+&kp LEFT_WIN  &kp Z         &kp X   &kp C         &kp V           &kp B      &to 0              &to 3          &kp N    &kp M      &kp FSLH  &kp UP_ARROW  &kp RIGHT  &kp EQUAL
+&kp LCTRL     &none         &none   &kp LEFT_ALT  &kp LEFT_SHIFT  &kp SPACE  &to 1              &none          &kp TAB  &kp ENTER  &kp LEFT  &kp DOWN      &kp COMMA  &kp DOT
+                                                                  &kp LCTRL  &to 2              &kp C_AL_CALC  &none
             >;
         };
 
         layer_1 {
             bindings = <
-&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7      &kp F8      &kp F9  &kp F10          &kp F11          &kp F12          &none
-&none  &none   &none   &none   &none   &none   &none     &none       &none       &none   &none            &none            &none            &none
-&none  &none   &none   &none   &none   &none   &none     &bt BT_CLR  &bt BT_NXT  &none   &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD
-&none  &none   &none   &none   &none   &none   &none     &none       &none       &none   &none            &none            &none            &none
-&none  &none   &none   &none   &none   &none   &none     &none       &none       &none   &none            &none            &none            &bootloader
-                                       &none   &none     &none       &none
+&none        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7      &kp F8      &kp F9  &kp F10  &kp F11          &kp F12          &none
+&none        &none   &none   &none   &none   &none   &none     &none       &none       &none   &none    &none            &none            &none
+&none        &none   &none   &none   &none   &none   &none     &bt BT_CLR  &bt BT_NXT  &none   &none    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI
+&none        &none   &none   &none   &none   &none   &to 0     &to 3       &none       &none   &none    &none            &none            &rgb_ug RGB_BRD
+&bootloader  &none   &none   &none   &none   &none   &to 1     &none       &none       &none   &none    &none            &none            &bootloader
+                                             &none   &to 2     &none       &none
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&none  &none  &none  &none  &none  &none  &none    &none  &none                 &none                  &none          &none              &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN   &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT        &kp DOUBLE_QUOTES  &none  &none
+&none  &none  &none  &none  &none  &none  &to 0    &to 3  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none          &none              &none  &none
+&none  &none  &none  &none  &none  &none  &to 1    &none  &none                 &none                  &none          &none              &none  &none
+                                   &none  &to 2    &none  &none
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&none  &none  &none  &none  &none  &none  &none    &none  &none  &none   &kp FSLH  &kp ASTERISK  &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &none  &kp N7  &kp N8    &kp N9        &none  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &none  &kp N4  &kp N5    &kp N6        &none  &none
+&none  &none  &none  &none  &none  &none  &to 0    &to 3  &none  &kp N1  &kp N2    &kp N3        &none  &none
+&none  &none  &none  &none  &none  &none  &to 1    &none  &none  &none   &kp N0    &none         &none  &none
+                                   &none  &to 2    &none  &none
             >;
         };
 
