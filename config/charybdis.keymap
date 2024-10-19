@@ -3,11 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
-&lt {
-    tapping-term-ms = <200>;
-    flavor = "balanced";
-    quick-tap-ms = <150>;
-};
 
 / {
     keymap {
@@ -15,38 +10,38 @@
 
         layer_0 {
             bindings = <
-&kp ESC       &kp NUMBER_1  &kp N2  &kp N3        &kp N4          &kp N5     &kp PRINTSCREEN    &kp HOME    &kp N6   &kp N7     &kp N8    &kp N9        &kp N0     &kp BSPC
-&kp GRAVE     &kp Q         &kp W   &kp E         &kp R           &kp T      &kp PG_UP          &kp END     &kp Y    &kp U      &kp I     &kp O         &kp P      &kp BSLH
-&kp CAPS      &kp A         &kp S   &kp D         &kp F           &kp G      &kp PAGE_DOWN      &kp PERIOD  &kp H    &kp J      &kp K     &kp L         &kp SEMI   &kp MINUS
-&kp LEFT_WIN  &kp Z         &kp X   &kp C         &kp V           &kp B      &to 0              &to 3       &kp N    &kp M      &kp FSLH  &kp UP_ARROW  &kp RIGHT  &kp EQUAL
-&kp LCTRL     &none         &none   &kp LEFT_ALT  &kp LEFT_SHIFT  &kp SPACE  &to 1              &none       &kp TAB  &kp ENTER  &kp LEFT  &kp DOWN      &kp COMMA  &kp DOT
-                                                                  &kp LCTRL  &to 2              &none       &none
+&kp ESC         &kp NUMBER_1  &kp N2    &kp N3     &kp N4     &kp N5     &kp PRINTSCREEN    &kp HOME    &kp N6      &kp N7     &kp N8     &kp N9            &kp N0             &kp BSPC
+&kp GRAVE       &kp Q         &kp W     &kp E      &kp R      &kp T      &kp PG_UP          &kp END     &kp Y       &kp U      &kp I      &kp O             &kp P              &kp ENTER
+&kp TAB         &kp A         &kp S     &kp D      &kp F      &kp G      &kp PAGE_DOWN      &kp INSERT  &kp H       &kp J      &kp K      &kp L             &kp SEMI           &kp SQT
+&kp LEFT_SHIFT  &kp Z         &kp X     &kp C      &kp V      &kp B      &kp SPACE          &kp SPACE   &kp N       &kp M      &kp COMMA  &kp PERIOD        &kp SLASH          &kp RSHFT
+&kp LCTRL       &kp LEFT_WIN  &kp LALT  &kp SPACE  &kp SPACE  &kp SPACE  &kp CAPS           &kp CAPS    &kp DELETE  &kp MINUS  &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp NON_US_BACKSLASH
+                                        &mo 1      &mo 2      &kp SPACE  &kp SPACE          &kp SPACE   &kp SPACE   &mo 2      &mo 1
             >;
         };
 
         layer_1 {
             bindings = <
-&none        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7      &kp F8      &kp F9  &kp F10  &kp F11          &kp F12          &none
-&none        &none   &none   &none   &none   &none   &none     &none       &none       &none   &none    &none            &none            &none
-&none        &none   &none   &none   &none   &none   &none     &bt BT_CLR  &bt BT_NXT  &none   &none    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI
-&none        &none   &none   &none   &none   &none   &to 0     &to 3       &none       &none   &none    &none            &none            &rgb_ug RGB_BRD
-&bootloader  &none   &none   &none   &none   &none   &to 1     &none       &none       &none   &none    &none            &none            &bootloader
-                                             &none   &to 2     &none       &none
+&none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&none  &none   &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none    &none
+&none  &none   &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none    &none
+&none  &none   &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none    &none
+&none  &none   &none   &none   &none   &none   &none     &none   &none   &none   &none    &none    &none    &none
+                       &none   &none   &none   &none     &none   &none   &none   &none
             >;
         };
 
         layer_2 {
             bindings = <
-&none  &none  &none  &none  &none  &none  &none    &none  &none                 &none                  &none          &none              &none  &none
-&none  &none  &none  &none  &none  &none  &none    &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &kp GREATER_THAN   &none  &none
-&none  &none  &none  &none  &none  &none  &none    &none  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT        &kp DOUBLE_QUOTES  &none  &none
-&none  &none  &none  &none  &none  &none  &to 0    &to 3  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none          &none              &none  &none
-&none  &none  &none  &none  &none  &none  &to 1    &none  &none                 &none                  &none          &none              &none  &none
-                                   &none  &to 2    &none  &none
+&none        &none  &none  &none  &none  &none  &rgb_ug RGB_TOG    &bt BT_NXT  &bt BT_CLR  &none  &none  &none  &none  &none
+&none        &none  &none  &none  &none  &none  &rgb_ug RGB_EFF    &none       &none       &none  &none  &none  &none  &none
+&none        &none  &none  &none  &none  &none  &rgb_ug RGB_BRI    &none       &none       &none  &none  &none  &none  &none
+&none        &none  &none  &none  &none  &none  &rgb_ug RGB_BRD    &none       &none       &none  &none  &none  &none  &none
+&bootloader  &none  &none  &none  &none  &none  &none              &none       &none       &none  &none  &none  &none  &bootloader
+                           &none  &none  &none  &none              &none       &none       &none  &none
             >;
         };
 
-        layer_3 {
+      /*  layer_3 {
             bindings = <
 &none  &none  &none  &none  &none  &none  &none    &none  &none  &none   &kp FSLH  &kp ASTERISK  &none  &none
 &none  &none  &none  &none  &none  &none  &none    &none  &none  &kp N7  &kp N8    &kp N9        &none  &none
@@ -57,7 +52,7 @@
             >;
         };
 
-        /* layer_2 {
+        layer_2 {
             bindings = <
 &none  &none   &none    &none   &none         &none         &kp N1         &none         &none     &none  &none   &to 0
 &none  &none   &none    &none   &none         &none         &none         &none          &rgb_ug RGB_BRD &rgb_ug RGB_BRI  &rgb_ug RGB_EFF   &rgb_ug RGB_TOG
