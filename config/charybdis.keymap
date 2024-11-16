@@ -23,11 +23,11 @@
             // |             |            |  ALT | LEFT |					            |  END |  ALT |
 
             bindings = <
-&kp TAB         &kp Q  &kp W      &kp E      &kp R      &kp T            &kp Y       &kp U      &kp I      &kp O      &kp P     &kp BSPC
-&kp CAPS        &kp A  &kp S      &kp D      &kp F      &kp G            &kp H       &kp J      &kp K      &kp L      &kp SEMI  &kp APOS
-&kp LEFT_SHIFT  &kp Z  &kp X      &kp C      &kp V      &kp B            &kp N       &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
-                       &kp LCTRL  &kp LALT   &kp SPACE  &kp BACKSPACE    &kp DELETE  &kp ENTER  &kp BSLH   &kp LWIN
-                       &kp MINUS  &kp EQUAL  &mo 1      &mo 2            &kp LBKT    &kp RBKT   &kp ESC    &kp GRAVE
+&kp TAB         &kp Q  &kp W      &kp E     &kp R      &kp T            &kp Y       &kp U      &kp I      &kp O      &kp P     &kp BSPC
+&kp CAPS        &kp A  &kp S      &kp D     &kp F      &kp G            &kp H       &kp J      &kp K      &kp L      &kp SEMI  &kp APOS
+&kp LEFT_SHIFT  &kp Z  &kp X      &kp C     &kp V      &kp B            &kp N       &kp M      &kp COMMA  &kp DOT    &kp FSLH  &kp RIGHT_SHIFT
+                       &kp LCTRL  &kp LALT  &kp SPACE  &kp BACKSPACE    &kp DELETE  &kp ENTER  &kp BSLH   &kp LWIN
+                       &mo 1      &mo 2     &kp MINUS  &kp EQUAL        &kp LBKT    &kp RBKT   &kp ESC    &kp GRAVE
             >;
         };
 
@@ -59,11 +59,11 @@
             //                             |      |       |                |      |      |      
 
             bindings = <
-&bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &none  &none     &none     &none      &none  &none
-&none            &none            &none            &none            &none         &none           &none  &none     &kp UP    &none      &none  &none
-&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none         &bootloader     &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
-                                  &none            &none            &none         &none           &none  &none     &none     &none
-                                  &none            &none            &none         &none           &none  &none     &none     &none
+&bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4    &none        &none     &none     &none      &none  &none
+&none            &none            &none            &none            &none         &none           &none        &none     &kp UP    &none      &none  &none
+&rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &none         &bootloader     &bootloader  &kp LEFT  &kp DOWN  &kp RIGHT  &none  &none
+                                  &none            &none            &none         &none           &none        &none     &none     &none
+                                  &none            &none            &none         &none           &none        &none     &none     &none
             >;
         };
     };
