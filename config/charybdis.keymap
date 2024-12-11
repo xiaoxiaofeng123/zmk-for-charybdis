@@ -20,7 +20,7 @@
 &kp CAPS      &kp A         &kp S      &kp D         &kp F           &kp G      &kp PAGE_DOWN      &kp PERIOD  &kp H         &kp J      &kp K     &kp L         &kp SEMI   &kp MINUS
 &kp LEFT_WIN  &kp Z         &kp X      &kp C         &kp V           &kp B      &kp ENTER          &mo 3       &kp N         &kp M      &kp FSLH  &kp UP_ARROW  &kp RIGHT  &kp EQUAL
 &kp LCTRL     &kp LCTRL     &kp LCTRL  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp SPACE  &mo 1              &kp RCTRL   &kp TAB       &kp ENTER  &kp LEFT  &kp DOWN      &kp COMMA  &kp DOT
-                                                                     &kp LCTRL  &mo 2              &mo 1       &kp UP_ARROW
+                                                                     &kp LCTRL  &mo 2              &mo 1       &kp LC(PLUS)
             >;
         };
 
