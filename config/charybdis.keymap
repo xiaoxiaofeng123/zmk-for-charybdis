@@ -16,7 +16,7 @@
 
  macros {
         lm: lm {
-    compatible = "zmk,behavior-macro-two-param";
+    compatible = "zmk,behavior-macro";
     wait-ms = <0>;
     tap-ms = <0>;
     bindings
@@ -39,15 +39,11 @@
 &kp TAB         &kp Q   &kp W   &kp E         &kp R      &kp T       &kp Y      &kp U      &kp I      &kp O             &kp P     &kp BSLH
 &kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F      &kp G       &kp H      &kp J      &kp K      &kp L             &kp SEMI  &kp SQT
 &kp LCTRL       &kp Z   &kp X   &kp C         &kp V      &kp B       &kp N      &kp M      &kp COMMA  &kp LEFT_BRACKET  &kp FSLH  &kp MINUS
-                                &kp LEFT_ALT  &kp SPACE  &mo 1       &kp LWIN   &mo 1
+                                &kp LEFT_ALT  &kp SPACE  &mo 1       &kp LWIN   &lm
                                               &mkp MB1   &mkp MB2    &kp ENTER
             >;
 
             trackball-bindings = <&tmv_coarse>;
-
-//start
-            bindings = <lm>;
-//end
 
 
         };
