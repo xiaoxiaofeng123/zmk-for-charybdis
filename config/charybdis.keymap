@@ -18,9 +18,9 @@
         dongle_bootload_macro: bootload_macro {
             compatible = "zmk,behavior-macro";
             label = "BOOTLOAD_MACRO";
+            #binding-cells = <0>;
             bindings = <&macro_press &mo 1>
-                    , <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>
-                    ;
+                    , <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>;
         };
     };
 
