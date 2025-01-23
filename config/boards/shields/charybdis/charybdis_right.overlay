@@ -22,7 +22,7 @@
 };
 
 // trackball bus
-&spi0 {
+/*&spi0 {
 	status = "okay"; //okay
 	sck-pin = <8>; //old
     mosi-pin = <17>; //old
@@ -33,7 +33,7 @@
 &trackball {
 	status = "okay"; //okay
 	irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-};
+};*/
 &spi3 {
 	compatible = "nordic,nrf-spim";
 	status = "okay";
