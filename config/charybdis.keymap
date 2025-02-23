@@ -14,31 +14,24 @@
 
 
  macros {
-        To1_macro: RGB_macro {
-            compatible = "zmk,behavior-macro";
-            label = "RGB_MACRO";
-            #binding-cells = <0>;
-            bindings = <&macro_press &to 1>
-    , <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>；
-        };
-        
-To0_macro: RGB_macro {
-            compatible = "zmk,behavior-macro";
-            label = "RGB_MACRO";
-            #binding-cells = <0>;
-            bindings = <&macro_press &to 0>
-    , <&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50)>;
-         };
-To2_macro: RGB_macro {
-            compatible = "zmk,behavior-macro";
-            label = "RGB_MACRO";
-            #binding-cells = <0>;
-            bindings = <&macro_press &to 2>
-    , <&macro_tap &rgb_ug RGB_COLOR_HSB(356,100,50)>;
- };
-
-
+    RGB_macro_template: RGB_macro {
+        compatible = "zmk,behavior-macro";
+        label = "RGB_MACRO";
+        #binding-cells = <0>;
     };
+
+    To1_macro: RGB_macro_template {
+        bindings = <&macro_press &to 1>, <&macro_tap &rgb_ug RGB_COLOR_HSB(128,100,100)>;
+    };
+
+    To0_macro: RGB_macro_template {
+        bindings = <&macro_press &to 0>, <&macro_tap &rgb_ug RGB_COLOR_HSB(300,100,50)>;
+    };
+
+    To2_macro: RGB_macro_template {
+        bindings = <&macro_press &to 2>, <&macro_tap &rgb_ug RGB_COLOR_HSB(356,100,50)>;
+    };
+};
 
 
 
