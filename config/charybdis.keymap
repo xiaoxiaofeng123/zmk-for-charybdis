@@ -45,7 +45,8 @@
 &kp TAB         &kp A  &kp S        &kp D         &kp F     &kp G        &kp H      &kp J          &kp K             &kp L              &kp SEMI  &kp APOS
 &kp LEFT_SHIFT  &kp Z  &kp X        &kp C         &kp V     &kp B        &kp N      &kp M          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp FSLH  &kp RIGHT_SHIFT
                        &lt 3 MINUS  &kp EQUAL     &kp ESC   &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp COMMA         &lt 3 PERIOD
-                       &to 1        &kp LEFT_WIN  &kp LALT  &kp LCTRL    &kp RCTRL  &kp RALT       &kp RIGHT_WIN     &to 2
+                                                  &kp LALT  &kp LCTRL     &kp RCTRL  &kp RALT
+                                                  &to 1        &kp LEFT_WIN      &kp RIGHT_WIN     &to 2
             >;
         };
 
