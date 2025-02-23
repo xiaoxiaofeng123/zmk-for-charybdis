@@ -46,7 +46,7 @@
 &kp LEFT_SHIFT  &kp Z  &kp X        &kp C         &kp V     &kp B        &kp N      &kp M          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp FSLH  &kp RIGHT_SHIFT
                        &lt 3 MINUS  &kp EQUAL     &kp ESC   &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp COMMA         &lt 3 PERIOD
                                                   &kp LALT  &kp LCTRL     &kp RCTRL  &kp RALT
-                                                  &to 1        &kp LEFT_WIN      &kp RIGHT_WIN     &to 2
+                                                  &to 1     &kp LEFT_WIN  &kp RIGHT_WIN   &to 2
             >;
         };
 
