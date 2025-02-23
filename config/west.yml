@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/DoctorWangWang
+      url-base: https://github.com/zmkfirmware
   projects:
-    - name: zmk
+    - name: zephyr
       remote: zmkfirmware
-      revision: feature-test
+      revision: v3.5.0+zmk-fixes
       import: app/west.yml
   self:
     path: config
