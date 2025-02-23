@@ -55,7 +55,7 @@
 &kp TAB         &kp A  &kp S        &kp D         &kp F     &kp G        &kp H      &kp J          &kp K             &kp L              &kp SEMI  &kp APOS
 &kp LEFT_SHIFT  &kp Z  &kp X        &kp C         &kp V     &kp B        &kp N      &kp M          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp FSLH  &kp RIGHT_SHIFT
                        &lt 3 MINUS  &kp EQUAL     &kp ESC   &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp COMMA         &lt 3 PERIOD
-                          &kp LALT  &kp LCTRL &To1_macro     &kp LEFT_WIN    &kp RCTRL  &kp RALT  &kp RIGHT_WIN   &To2_macro
+                          &kp LALT  &kp LCTRL &To1_macro     &kp LEFT_WIN      &kp RIGHT_WIN   &To2_macro &kp RCTRL  &kp RALT
                                                     
             >;
         };
@@ -74,7 +74,7 @@
 &kp CAPS  &kp N1  &kp N2      &kp N3      &kp N4       &kp N5           &kp N6  &kp N7  &kp N8          &kp N9          &kp N0           &none
 &none     &none   &kp C_MENU  &kp INSERT  &kp PAGE_UP  &kp PAGE_DOWN    &none   &none   &none           &kp UP_ARROW    &kp RIGHT_ARROW  &none
                   &none       &none       &none        &none            &none   &none   &kp LEFT_ARROW  &kp DOWN_ARROW
-                  &To0_macro       &none       &none        &none            &none   &none   &none           &none
+                        &none      &none &To0_macro        &none            &none   &none   &none           &none
             >;
         };
 
@@ -92,7 +92,7 @@
 &none  &none  &none  &none  &none  &none    &kp N4     &kp N5         &kp N6          &kp KP_PLUS     &kp KP_MULTIPLY  &kp HOME
 &none  &none  &none  &none  &none  &none    &kp N1     &kp N2         &kp N3          &kp UP_ARROW    &kp RIGHT_ARROW  &kp END
               &none  &none  &none  &none    &kp ENTER  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW
-              &none  &none  &none  &none    &kp N0     &kp PERIOD     &kp ESC         &To0_macro
+              &none  &none  &none  &none         &kp ESC         &To0_macro  &kp N0     &kp PERIOD
             >;
         };
 
