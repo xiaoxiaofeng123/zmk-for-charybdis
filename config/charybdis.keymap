@@ -21,9 +21,9 @@ macros {
         bindings = <&rgb_ug RGB_EFF>,<&rgb_ug RGB_COLOR_HSB(128,100,50)>,<&to 1>;
     };
 
-   To1_macro_A: To1_macro {
+   To1_macro_A: To1_macro_A {
         compatible = "zmk,behavior-macro";
-        label = "To1_macro";
+        label = "To1_macro_A";
         #binding-cells = <0>;
         bindings = <&rgb_ug RGB_COLOR_HSB(128,100,50)>,<&to 1>;
     };
@@ -35,9 +35,9 @@ macros {
         bindings = <&rgb_ug RGB_EFR>,<&to 0>;
     };
 
-     To2_macro_A: To2_macro {
+     To2_macro_A: To2_macro_A {
         compatible = "zmk,behavior-macro";
-        label = "To2_macro";
+        label = "To2_macro_A";
         #binding-cells = <0>;
         bindings = <&rgb_ug RGB_COLOR_HSB(250,100,50)>,<&to 2>;
     };
