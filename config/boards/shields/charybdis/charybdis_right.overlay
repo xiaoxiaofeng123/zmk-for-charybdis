@@ -22,7 +22,7 @@
 };
 
 // trackball bus
-&pinctrl {
+/*&pinctrl {
     spi0_default: spi0_default {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
@@ -59,7 +59,7 @@
         //snipe-layers = <2>;
       // automouse-layer = <3>;
     };
-};
+};*/
 
 
 //RGB bus
