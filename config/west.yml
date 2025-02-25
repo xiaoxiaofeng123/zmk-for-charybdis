@@ -3,9 +3,9 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/DoctorWangWang
   projects:
-    - name: zmk
+    - name: 64key-3610
       remote: zmkfirmware
-      revision: feature-test
+      revision: 64key-3610-automouse
       import: app/west.yml
   self:
     path: config
