@@ -22,7 +22,7 @@
 };
 
 // trackball bus
-/*&pinctrl {
+&pinctrl {
     spi0_default: spi0_default {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 8)>,
@@ -59,11 +59,11 @@
         //snipe-layers = <2>;
       // automouse-layer = <3>;
     };
-};*/
+};
 
 
 //RGB bus
-/*&pinctrl {
+&pinctrl {
     spi3_default: spi3_default {
         group1 {
             psels = <NRF_PSEL(SPIM_MOSI, 0, 10)>;
@@ -101,7 +101,7 @@
                          LED_COLOR_ID_RED
                          LED_COLOR_ID_BLUE>;
     };
-};*/
+};
 
 
 
