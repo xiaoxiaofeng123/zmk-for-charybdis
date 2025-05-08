@@ -16,7 +16,7 @@
         layer_0 {
             bindings = <
 &kp tab &kp Q  &kp W  &kp E         &kp R           &kp T          &kp Y        &kp U       &kp I      &kp O    &kp P &kp backspace
-&kp shift &kp A  &kp S  &kp D         &kp F           &kp G          &kp H        &kp J       &kp K      &kp L    &kp SEMI &kp enter
+&kp LEFT_SHIFT &kp A  &kp S  &kp D         &kp F           &kp G          &kp H        &kp J       &kp K      &kp L    &kp SEMI &kp enter
 &kp lctrl &kp Z  &kp X  &kp C         &kp V           &kp B          &kp N        &kp M       &kp COMMA  &kp DOT  &kp BACKSPACE &kp dot
               &kp LEFT_WIN  &kp LEFT_SHIFT  &lt 2 LCTRL    &lt 1 SPACE  &kp DELETE  &kp ENTER
             >;
