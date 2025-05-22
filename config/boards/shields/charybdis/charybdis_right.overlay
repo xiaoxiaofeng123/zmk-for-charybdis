@@ -7,7 +7,7 @@
 #include "charybdis.dtsi"
 
 &default_transform {
-    col-offset = <6>;
+    col-offset = <5>;
 }; 
 
 &kscan0 {
@@ -17,7 +17,7 @@
 		, <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		, <&gpio1 0  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
 		, <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&gpio1 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		
 		;
 };
 &right_encoder {
