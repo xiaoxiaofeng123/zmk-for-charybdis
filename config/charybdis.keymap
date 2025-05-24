@@ -1,6 +1,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 &lt {
@@ -41,9 +42,9 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &kp Q  &kp W  &kp E      &kp R     &kp T       &kp Y  &kp U  &kp I      &kp O    &kp P      &kp C_MUTE
-&kp TAB         &kp A  &kp S  &kp D      &kp F     &kp G       &kp H  &kp J  &kp K      &kp L    &kp SPACE  &kp RSHFT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V     &kp B       &kp N  &kp M  &kp RCTRL  &kp DOT  &kp FSLH   &kp CAPS
+&kp ESC         &kp Q  &kp W  &kp E      &kp R     &kp T       &kp Y  &kp U  &kp I      &kp O     &kp P      &kp C_MUTE
+&kp TAB         &kp A  &kp S  &kp D      &kp F     &kp G       &kp H  &kp J  &kp K      &kp L     &kp SPACE  &kp RSHFT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C      &kp V     &kp B       &kp N  &kp M  &kp RCTRL  &mkp MB1  &mkp MB2   &kp CAPS
                               &kp LCTRL  &kp LGUI  &kp LALT    &mo 1  &mo 2
             >;
 
