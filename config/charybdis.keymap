@@ -10,47 +10,52 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    macros {
+        To1_macro: To1_macro {
+            compatible = "zmk,behavior-macro";
+            label = "To1_macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(128,100,50) &to 1>;
+        };
 
+        To1_macro_A: To1_macro_A {
+            compatible = "zmk,behavior-macro";
+            label = "To1_macro_A";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(128,100,50) &to 1>;
+        };
 
+        To0_macro: To0_macro {
+            compatible = "zmk,behavior-macro";
+            label = "To0_macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_EFR &to 0>;
+        };
 
-macros {
-    To1_macro: To1_macro {
-        compatible = "zmk,behavior-macro";
-        label = "To1_macro";
-        #binding-cells = <0>;
-        bindings = <&rgb_ug RGB_EFF>,<&rgb_ug RGB_COLOR_HSB(128,100,50)>,<&to 1>;
+        To2_macro_A: To2_macro_A {
+            compatible = "zmk,behavior-macro";
+            label = "To2_macro_A";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(250,100,50) &to 2>;
+        };
+
+        To2_macro: To2_macro {
+            compatible = "zmk,behavior-macro";
+            label = "To2_macro";
+            #binding-cells = <0>;
+            bindings = <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(250,100,50) &to 2>;
+        };
     };
 
-   To1_macro_A: To1_macro_A {
-        compatible = "zmk,behavior-macro";
-        label = "To1_macro_A";
-        #binding-cells = <0>;
-        bindings = <&rgb_ug RGB_COLOR_HSB(128,100,50)>,<&to 1>;
+    combos {
+        compatible = "zmk,combos";
+
+        RGB {
+            bindings = <&rgb_ug RGB_TOG>;
+            key-positions = <20 46>;
+            layers = <0>;
+        };
     };
-
-    To0_macro: To0_macro {
-        compatible = "zmk,behavior-macro";
-        label = "To0_macro";
-        #binding-cells = <0>;
-        bindings = <&rgb_ug RGB_EFR>,<&to 0>;
-    };
-
-     To2_macro_A: To2_macro_A {
-        compatible = "zmk,behavior-macro";
-        label = "To2_macro_A";
-        #binding-cells = <0>;
-        bindings = <&rgb_ug RGB_COLOR_HSB(250,100,50)>,<&to 2>;
-    };
-
-     To2_macro: To2_macro {
-        compatible = "zmk,behavior-macro";
-        label = "To2_macro";
-        #binding-cells = <0>;
-        bindings = <&rgb_ug RGB_EFF>,<&rgb_ug RGB_COLOR_HSB(250,100,50)>,<&to 2>;
-    };
-};
-
-
 
     keymap {
         compatible = "zmk,keymap";
@@ -65,12 +70,11 @@ macros {
             // |             |            |  ALT | LEFT |					            |  END |  ALT |
 
             bindings = <
-&kp GRAVE       &kp Q  &kp W        &kp E         &kp R     &kp T        &kp Y      &kp U          &kp I             &kp O              &kp P     &kp BACKSLASH
-&kp TAB         &kp A  &kp S        &kp D         &kp F     &kp G        &kp H      &kp J          &kp K             &kp L              &kp SEMI  &kp APOS
-&kp LEFT_SHIFT  &kp Z  &kp X        &kp C         &kp V     &kp B        &kp N      &kp M          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp FSLH  &kp RIGHT_SHIFT
-                       &lt 3 MINUS  &kp EQUAL     &kp ESC   &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp COMMA         &lt 3 PERIOD
-                          &kp LALT  &kp LCTRL &To1_macro     &kp LEFT_WIN      &kp RIGHT_WIN   &To2_macro &kp RCTRL  &kp RALT
-                                                    
+&kp GRAVE       &kp Q  &kp W        &kp E      &kp R       &kp T           &kp Y          &kp U       &kp I             &kp O              &kp P     &kp BACKSLASH
+&kp TAB         &kp A  &kp S        &kp D      &kp F       &kp G           &kp H          &kp J       &kp K             &kp L              &kp SEMI  &kp APOS
+&kp LEFT_SHIFT  &kp Z  &kp X        &kp C      &kp V       &kp B           &kp N          &kp M       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp FSLH  &kp RIGHT_SHIFT
+                       &lt 3 MINUS  &kp EQUAL  &kp ESC     &kp SPACE       &kp BACKSPACE  &kp ENTER   &kp COMMA         &lt 3 PERIOD
+                       &kp LALT     &kp LCTRL  &kp DELETE  &kp LEFT_WIN    &kp RIGHT_WIN  &To2_macro  &kp RCTRL         &To1_macro
             >;
         };
 
@@ -84,11 +88,11 @@ macros {
             //               |     |      |      |      |                   |      |       |       |      |
 
             bindings = <
-&kp F1    &kp F2  &kp F3      &kp F4      &kp F5       &kp F6           &kp F7  &kp F8  &kp F9          &kp F10         &kp F11          &kp F12
-&kp CAPS  &kp N1  &kp N2      &kp N3      &kp N4       &kp N5           &kp N6  &kp N7  &kp N8          &kp N9          &kp N0           &none
-&none     &none   &kp C_MENU  &kp INSERT  &kp PAGE_UP  &kp PAGE_DOWN    &none   &none   &none           &kp UP_ARROW    &kp RIGHT_ARROW  &none
-                  &none       &none       &none        &none            &none   &none   &kp LEFT_ARROW  &kp DOWN_ARROW
-                        &none      &none &To0_macro        &none            &none   &To2_macro_A   &none           &none
+&kp F1    &kp F2  &kp F3      &kp F4      &kp F5       &kp F6           &kp F7  &kp F8        &kp F9          &kp F10         &kp F11          &kp F12
+&kp CAPS  &kp N1  &kp N2      &kp N3      &kp N4       &kp N5           &kp N6  &kp N7        &kp N8          &kp N9          &kp N0           &none
+&none     &none   &kp C_MENU  &kp INSERT  &kp PAGE_UP  &kp PAGE_DOWN    &none   &none         &none           &kp UP_ARROW    &kp RIGHT_ARROW  &none
+                  &none       &none       &none        &none            &none   &none         &kp LEFT_ARROW  &kp DOWN_ARROW
+                  &none       &none       &To0_macro   &none            &none   &To2_macro_A  &none           &To0_macro
             >;
         };
 
@@ -102,11 +106,11 @@ macros {
             //                             |      |       |                |      |      |      
 
             bindings = <
-&none  &none  &none  &none  &none  &none    &kp N7     &kp N8         &kp N9          &kp KP_MINUS    &kp KP_DIVIDE    &kp PRINTSCREEN
-&none  &none  &none  &none  &none  &none    &kp N4     &kp N5         &kp N6          &kp KP_PLUS     &kp KP_MULTIPLY  &kp HOME
-&none  &none  &none  &none  &none  &none    &kp N1     &kp N2         &kp N3          &kp UP_ARROW    &kp RIGHT_ARROW  &kp END
-              &none  &none  &none  &none    &kp ENTER  &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW
-              &none  &none  &To1_macro_A   &none         &kp ESC         &To0_macro  &kp N0     &kp PERIOD
+&none  &none  &none  &none  &none  &none    &kp N7         &kp N8      &kp N9          &kp KP_MINUS    &kp KP_DIVIDE    &kp PRINTSCREEN
+&none  &none  &none  &none  &none  &none    &kp N4         &kp N5      &kp N6          &kp KP_PLUS     &kp KP_MULTIPLY  &kp HOME
+&none  &none  &none  &none  &none  &none    &kp N1         &kp N2      &kp N3          &kp UP_ARROW    &kp RIGHT_ARROW  &kp END
+              &none  &none  &none  &none    &kp BACKSPACE  &kp ENTER   &kp LEFT_ARROW  &kp DOWN_ARROW
+              &none  &none  &none  &none    &kp ESC        &To0_macro  &kp N0          &To1_macro_A
             >;
         };
 
