@@ -16,7 +16,7 @@
             compatible = "zmk,behavior-macro";
             label = "To1_macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(128,100,50) &to 1>;
+            bindings = <&rgb_ug RGB_OFF &to 1>;
         };
 
         To1_macro_A: To1_macro_A {
@@ -30,7 +30,7 @@
             compatible = "zmk,behavior-macro";
             label = "To0_macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_EFR &to 0>;
+            bindings = <&rgb_ug RGB_ON &to 0>;
         };
 
         To2_macro_A: To2_macro_A {
