@@ -4,6 +4,75 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    macros {
+        M2: M1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp T>,
+                <&macro_wait_time 30>,
+                <&kp NUMBER_2>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>,
+                <&macro_wait_time 30>,
+                <&kp T>,
+                <&macro_wait_time 30>,
+                <&kp NUMBER_3>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>,
+                <&macro_wait_time 30>,
+                <&kp S>,
+                <&macro_wait_time 30>,
+                <&kp NUMBER_2>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>;
+
+            label = "M1";
+        };
+
+        M3: M3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp S>,
+                <&macro_wait_time 30>,
+                <&kp NUMBER_2>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>,
+                <&macro_wait_time 30>,
+                <&kp P>,
+                <&macro_wait_time 30>,
+                <&kp NUMBER_2>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>;
+
+            label = "M3";
+        };
+
+        M4: M4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp W>,
+                <&macro_wait_time 30>,
+                <&kp NUMBER_3>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>,
+                <&macro_wait_time 30>,
+                <&kp T>,
+                <&macro_wait_time 30>,
+                <&kp NUMBER_2>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>,
+                <&macro_wait_time 30>,
+                <&kp NUMBER_2>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>;
+
+            label = "M4";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -25,7 +94,7 @@
 &none  &none  &none  &none           &kp UP_ARROW    &none            &none    &none         &none      &none      &kp MINUS     &kp N4  &kp N5        &kp N6
 &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none         &none      &none      &kp PLUS      &kp N1  &kp N2        &kp N3
 &none  &none  &to 0  &none           &none           &kp BSPC         &none    &kp N0        &none      &kp EQUAL  &kp ASTERISK  &to 0   &kp PERIOD    &kp DEL
-                     &none           &none           &none            &none    &kp ASTERISK  &kp SLASH  &kp PLUS   &kp MINUS
+                     &M2             &M4             &none            &none    &kp ASTERISK  &kp SLASH  &kp PLUS   &kp MINUS
             >;
         };
 
