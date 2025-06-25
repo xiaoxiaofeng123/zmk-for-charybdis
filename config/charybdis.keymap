@@ -94,7 +94,7 @@
 &none  &none  &none  &none           &kp UP_ARROW    &none            &none    &none         &none      &none      &kp MINUS     &kp N4  &kp N5        &kp N6
 &none  &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none    &none         &none      &none      &kp PLUS      &kp N1  &kp N2        &kp N3
 &none  &none  &to 0  &none           &none           &kp BSPC         &none    &kp N0        &none      &kp EQUAL  &kp ASTERISK  &to 0   &kp PERIOD    &kp DEL
-                     &M2             &M4             &none            &none    &kp ASTERISK  &kp SLASH  &kp PLUS   &kp MINUS
+                     &M2             &M4             &M3              &none    &kp ASTERISK  &kp SLASH  &kp PLUS   &kp MINUS
             >;
         };
 
