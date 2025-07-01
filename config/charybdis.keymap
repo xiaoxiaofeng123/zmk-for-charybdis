@@ -74,32 +74,6 @@
             label = "M4";
         };
 
-        Q1: Q2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp Q>,
-                <&macro_wait_time 30>,
-                <&kp NUMBER_2>,
-                <&macro_wait_time 30>,
-                <&kp ENTER>;
-
-            label = "Q2";
-        };
-
-        Q2: Q2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp Q>,
-                <&macro_wait_time 30>,
-                <&kp NUMBER_5>,
-                <&macro_wait_time 30>,
-                <&kp ENTER>;
-
-            label = "Q2";
-        };
-
         INTRO: INTRO {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -143,16 +117,30 @@
             label = "INTRO";
         };
 
-        screenshot: alttab {
+        Q1: Q1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_ALT>,
-                <&macro_wait_time 10>,
                 <&kp Q>,
-                <&macro_wait_time 10>;
+                <&macro_wait_time 30>,
+                <&kp NUMBER_2>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>;
 
-            label = "ALTTAB";
+            label = "Q1";
+        };
+
+        Q2: Q2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp Q>,
+                <&macro_wait_time 30>,
+                <&kp N5>,
+                <&macro_wait_time 30>,
+                <&kp ENTER>;
+
+            label = "Q2";
         };
     };
 
