@@ -149,12 +149,12 @@
 
         layer_0 {
             bindings = <
-&mo 2    &kp F2        &kp F5  &kp LEFT   &kp RIGHT       &kp ESCAPE  &kp BACKSPACE    &kp COLON  &kp PERIOD  &none         &none            &none             &none          &mo 2
-&Q1      &kp PAGE_UP   &kp Q   &kp W      &kp E           &kp R       &kp T            &kp Y      &kp U       &kp I         &kp O            &kp SINGLE_QUOTE  &none          &none
-&Q2      &kp CAPSLOCK  &kp A   &kp S      &kp D           &kp F       &kp G            &kp H      &kp J       &kp K         &kp L            &kp P             &kp PAGE_DOWN  &none
-&INTRO   &kp LCTRL     &kp Z   &kp X      &kp C           &kp V       &kp B            &kp N      &kp M       &kp QUESTION  &kp EXCLAMATION  &kp DELETE        &kp PAGE_UP    &kp C_VOLUME_UP
-&kp TAB  &kp LEFT_ALT  &to 1   &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER   &kp SPACE        &kp COMMA  &kp ENTER   &to 1         &kp RIGHT_SHIFT  &none             &none          &kp C_VOLUME_DOWN
-                               &kp N4     &kp N2          &kp N5      &kp N3           &kp LEFT   &kp PERIOD  &kp RIGHT     &kp BACKSPACE
+&mo 2    &kp F2        &kp F5  &kp LEFT   &kp RIGHT       &kp ESCAPE  &kp BACKSPACE    &kp COLON  &kp PERIOD  &none          &none            &none             &none          &mo 2
+&Q1      &kp PAGE_UP   &kp Q   &kp W      &kp E           &kp R       &kp T            &kp Y      &kp U       &kp I          &kp O            &kp SINGLE_QUOTE  &none          &none
+&Q2      &kp CAPSLOCK  &kp A   &kp S      &kp D           &kp F       &kp G            &kp H      &kp J       &kp K          &kp L            &kp P             &kp PAGE_DOWN  &none
+&INTRO   &kp LCTRL     &kp Z   &kp X      &kp C           &kp V       &kp B            &kp N      &kp M       &kp QUESTION   &kp EXCLAMATION  &kp DELETE        &kp PAGE_UP    &kp C_VOLUME_UP
+&kp TAB  &kp LEFT_ALT  &to 1   &kp LCTRL  &kp LEFT_SHIFT  &kp ENTER   &kp SPACE        &kp COMMA  &kp ENTER   &to 1          &kp RIGHT_SHIFT  &none             &none          &kp C_VOLUME_DOWN
+                               &kp N4     &kp N2          &kp N5      &kp N3           &kp DOT    &kp LEFT    &kp BACKSPACE  &kp RIGHT
             >;
         };
 
