@@ -48,17 +48,51 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        VOL-UP {
+            bindings = <&kp C_VOLUME_UP>;
+            key-positions = <5 34>;
+        };
+
+        VOL-DOWN {
+            bindings = <&kp K_VOLUME_DOWN>;
+            key-positions = <5 46>;
+        };
+
+        back {
+            bindings = <&kp C_AC_BACK>;
+            key-positions = <5 45>;
+        };
+
+        foward {
+            bindings = <&kp C_AC_FORWARD>;
+            key-positions = <5 47>;
+        };
+
+        desk+ {
+            bindings = <&kp LC(LG(LEFT))>;
+            key-positions = <41 45>;
+        };
+
+        desk- {
+            bindings = <&kp LC(LG(RIGHT))>;
+            key-positions = <41 47>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3     &kp N4        &kp N5        &lt 2 NUMBER_6  &kp N7     &kp N8     &kp N9    &kp N0        &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E      &kp R         &kp T         &kp Y           &kp U      &kp I      &kp O     &kp P         &kp BSLH
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F         &kp G         &kp H           &kp J      &kp K      &kp L     &kp UP_ARROW  &kp APOS
-&kp LCTRL       &kp Z   &kp X   &kp C      &kp V         &kp B         &kp N           &kp M      &kp COMMA  &kp LEFT  &kp DOWN      &kp RIGHT
-                                &kp SPACE  &kp LEFT_ALT  &To1_macro    &kp LWIN        &kp SPACE
-                                           &mkp MB1      &mkp MB2      &kp ENTER
+&kp ESC         &kp N1  &kp N2  &kp N3       &kp N4        &kp N5        &lt 2 NUMBER_6  &kp N7     &kp N8     &kp N9    &kp N0        &kp BACKSPACE
+&kp TAB         &kp Q   &kp W   &kp E        &kp R         &kp T         &kp Y           &kp U      &kp I      &kp O     &kp P         &kp BSLH
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D        &kp F         &kp G         &kp H           &kp J      &kp K      &kp L     &kp UP_ARROW  &kp APOS
+&kp LCTRL       &kp Z   &kp X   &kp C        &kp V         &kp B         &kp N           &kp M      &kp COMMA  &kp LEFT  &kp DOWN      &kp RIGHT
+                                &lt 1 SPACE  &kp LEFT_ALT  &To1_macro    &kp LWIN        &kp SPACE
+                                             &mkp MB1      &mkp MB2      &kp ENTER
             >;
         };
 
