@@ -50,32 +50,26 @@
 
     combos {
         compatible = "zmk,combos";
-
         VOL-UP {
             bindings = <&kp C_VOLUME_UP>;
             key-positions = <5 34>;
         };
-
         VOL-DOWN {
             bindings = <&kp K_VOLUME_DOWN>;
             key-positions = <5 46>;
         };
-
         back {
             bindings = <&kp C_AC_BACK>;
             key-positions = <5 45>;
         };
-
         foward {
             bindings = <&kp C_AC_FORWARD>;
             key-positions = <5 47>;
         };
-
         desk+ {
             bindings = <&kp LC(LG(LEFT))>;
             key-positions = <41 45>;
         };
-
         desk- {
             bindings = <&kp LC(LG(RIGHT))>;
             key-positions = <41 47>;
