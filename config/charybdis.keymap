@@ -16,14 +16,14 @@
             compatible = "zmk,behavior-macro";
             label = "To1_macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(128,100,50) &to 1>;
+            bindings = <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(128,100,50) &to 0>;
         };
 
         To1_macro_A: To1_macro_A {
             compatible = "zmk,behavior-macro";
             label = "To1_macro_A";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(128,100,50) &to 1>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(128,100,50) &to 0>;
         };
 
         To0_macro: To0_macro {
@@ -37,14 +37,21 @@
             compatible = "zmk,behavior-macro";
             label = "To2_macro_A";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_COLOR_HSB(250,100,50) &to 2>;
+            bindings = <&rgb_ug RGB_COLOR_HSB(250,100,50) &to 0>;
         };
 
         To2_macro: To2_macro {
             compatible = "zmk,behavior-macro";
             label = "To2_macro";
             #binding-cells = <0>;
-            bindings = <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(250,100,50) &to 2>;
+            bindings = <&rgb_ug RGB_EFF &rgb_ug RGB_COLOR_HSB(250,100,50) &to 0>;
+        };
+
+        PASSWORD: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp N8 &kp N5 &kp N0 &kp N6 &kp N0 &kp N4 &kp X &kp X &kp Z &kp J &kp J &kp S &kp S>;
+            label = "NEW_MACRO";
         };
     };
 
@@ -53,34 +60,34 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3     &kp N4        &kp N5        &lt 2 NUMBER_6  &kp N7     &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp CAPS        &kp Q   &kp W   &kp E      &kp R         &kp T         &kp Y           &kp U      &kp I      &kp O    &kp P     &kp BSLH
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F         &kp G         &kp H           &kp J      &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LCTRL       &kp Z   &kp X   &kp C      &kp V         &kp B         &kp N           &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp DEL
-                                &kp SPACE  &kp LEFT_ALT  &To1_macro    &kp LWIN        &kp SPACE
-                                           &mkp MB1      &mkp MB2      &kp ENTER
+&kp ESC         &kp N1  &kp N2  &kp N3     &kp N4     &kp N5      &kp NUMBER_6  &kp N7         &kp N8     &kp N9   &kp N0    &kp DEL
+&kp TAB         &kp Q   &kp W   &kp E      &kp R      &kp T       &kp Y         &kp U          &kp I      &kp O    &kp P     &kp BSLH
+&kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F      &kp G       &kp H         &kp J          &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LCTRL       &kp Z   &kp X   &kp C      &kp V      &kp B       &kp N         &kp M          &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
+                                &kp LMETA  &kp SPACE  &to 1       &to 2         &kp BACKSPACE
+                                           &mkp MB1   &mkp MB2    &kp ENTER
             >;
         };
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2  &kp F3  &kp F4        &kp F5     &kp F6        &kp F7             &kp F8            &kp F9          &kp F10     &kp F11       &kp F12
-&kp TAB         &none   &none   &none         &none      &none         &kp DOUBLE_QUOTES  &kp SQT           &kp UNDERSCORE  &kp MINUS   &kp PLUS      &kp EQUAL
-&kp LEFT_SHIFT  &none   &none   &none         &none      &none         &kp LEFT_BRACE     &kp RIGHT_BRACE   &kp LBKT        &kp RBKT    &kp PIPE      &kp BSLH
-&kp LCTRL       &none   &none   &none         &none      &none         &kp LESS_THAN      &kp GREATER_THAN  &kp COMMA       &kp PERIOD  &kp QUESTION  &kp SLASH
-                                &kp LEFT_ALT  &kp SPACE  &To0_macro    &kp COLON          &kp SEMICOLON
-                                              &mkp MB1   &mkp MB2      &kp GRAVE
+&kp F12    &kp F1                             &kp F2          &kp F3                                  &kp F4            &kp F5               &kp F6       &kp F7           &kp F8         &kp F9           &kp F10    &kp F11
+&kp CAPS   &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS  &msc SCRL_UP    &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS  &kp K_PREV        &kp C_VOL_UP         &kp HOME     &kp UP_ARROW     &kp END        &kp PRINTSCREEN  &kp MINUS  &kp EQUAL
+&kp LSHFT  &msc SCRL_LEFT                     &msc SCRL_DOWN  &msc SCRL_RIGHT                         &kp K_PLAY_PAUSE  &kp K_MUTE           &kp LEFT     &kp DOWN         &kp RIGHT      &kp SLCK         &kp LBKT   &kp RBKT
+&PASSWORD  &kp K_COPY                         &kp K_CUT       &kp K_PASTE                             &kp K_NEXT        &kp C_VOLUME_DOWN    &kp PAGE_UP  &kp PRINTSCREEN  &kp PAGE_DOWN  &kp INS          &kp F4     &kp GRAVE
+                                                              &kp K_UNDO                              &mkp MB3          &to 0                &to 2        &kp BSPC
+                                                                                                      &mkp MB1          &mkp MB2             &kp ENTER
             >;
         };
 
         layer_2 {
             bindings = <
-&bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4       &none  &none  &none  &none  &none  &none
-&none            &none            &none            &none            &none         &none              &none  &none  &none  &none  &none  &none
-&rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &none         &none              &none  &none  &none  &none  &none  &none
-&rgb_ug RGB_EFF  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &none            &none         &rgb_ug RGB_TOG    &none  &none  &none  &none  &none  &none
-                                                   &none            &none         &none              &none  &none
-                                                                    &none         &none              &none
+&bt BT_CLR    &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &PASSWORD         &kp N7     &kp N8         &kp N9     &kp PLUS   &msc SCRL_LEFT   &kp DELETE
+&bt BT_SEL 1  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &msc SCRL_UP     &kp UP_ARROW     &msc SCRL_DOWN    &kp N4     &kp N5         &kp N6     &kp MINUS  &msc SCRL_RIGHT  &kp TAB
+&bt BT_SEL 2  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &kp LEFT         &kp DOWN_ARROW   &kp RIGHT         &kp N1     &kp N2         &kp N3     &kp ASTRK  &kp EQUAL        &kp RSHFT
+&bt BT_SEL 3  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp LG(X)        &kp LG(C)        &kp LG(V)         &kp N0     &kp DOT        &kp COMMA  &kp FSLH   &kp RALT         &kp RCTRL
+                                                &kp TAB          &kp SPACE        &to 1             &to 0      &kp BACKSPACE
+                                                                 &mkp MB1         &mkp MB2          &kp ENTER
             >;
         };
 
